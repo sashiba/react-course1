@@ -23,9 +23,11 @@ class App extends Component {
       : this.setState({ [name]: value });
   }
 
+  handleSubmit() {}
+
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <input
           type="text"
           value={this.state.firstName}
@@ -90,6 +92,8 @@ class App extends Component {
         </h1>
         <h2>You are a {this.state.gender}</h2>
         <h2>Your favorite color is {this.state.favColor}</h2>
+
+        <button>Submit</button>
       </form>
     );
   }
